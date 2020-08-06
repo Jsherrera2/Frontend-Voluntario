@@ -1,0 +1,57 @@
+
+<br><br>
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">Evento</div>
+    <div class="card-body">
+      <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faClipboard '></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading">Nombre Evento</small>
+            <p class="h6"><strong>{{evento.nombre }}</strong></p>
+        </div>
+    </div> 
+    <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faCalendarDay'></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading"> Fecha Inauguración </small>
+            <p class="h6"><strong>{{evento.fecha_inicio | date : 'longDate'}}</strong></p>
+        </div>
+    </div> 
+    <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faCalendarDay'></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading"> Fecha Finalización</small>
+            <p class="h6"><strong>{{evento.fecha_final | date : 'longDate'}}</strong></p>
+        </div>
+    </div>
+    <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faBuilding'></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading">Empresa Organizadora</small>
+            <p class="h6"><strong>{{evento.organizador}}</strong></p>
+        </div>
+    </div>
+    <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faListOl'></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading">Categoria</small>
+            <p class="h6"><strong>{{evento.idcategoria}}</strong></p>
+        </div>
+    </div>
+   
+    </div>
+    <button [routerLink]="['/evento/list']" class="btn btn-info" ><fa-icon [icon]="faArrowAltCircleLeft"></fa-icon>&nbsp;Volver</button> 
+</div>
+
+
+

@@ -1,0 +1,76 @@
+
+<br><br>
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">Voluntario</div>
+    <div class="card-body">
+      <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faUser'></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading">Nombres</small>
+            <p class="h6"><strong>{{voluntario.nombres }}</strong></p>
+        </div>
+    </div> 
+    <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faUser'></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading">Apellidos</small>
+            <p class="h6"><strong>{{voluntario.apellidos }}</strong></p>
+        </div>
+    </div> 
+    <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faIdCard'></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading">Cédula</small>
+            <p class="h6"><strong>{{voluntario.cedula}}</strong></p>
+        </div>
+    </div>
+    <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faCalendar'></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading">Fecha de nacimiento</small>
+            <p class="h6"><strong>{{voluntario.fecha_nacimiento  | date : 'longDate'}}</strong></p>
+        </div>
+    </div>
+    <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faGenderless'></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading">Sexo</small>
+            <p class="h6"><strong>{{voluntario.sexo}}</strong></p>
+        </div>
+    </div>
+    <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faMapMarked'></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading">Dirección</small>
+            <p class="h6"><strong>{{voluntario.direccion}}</strong></p>
+        </div>
+    </div>
+    <div class="media">
+        <div class="media-left">
+            <fa-icon class="mr-3 fa-2x" [icon]='faPhone'></fa-icon>
+        </div>
+        <div class="media-body">
+            <small class="media-heading">Teléfono</small>
+            <p class="h6"><strong>{{voluntario.telefono}}</strong></p>
+        </div>
+    </div>
+    </div>
+    <button [routerLink]="['/voluntario']" class="btn btn-info" ><fa-icon [icon]="faCalendar"></fa-icon>&nbsp;Volver</button> 
+</div>
+
+
+
+
+

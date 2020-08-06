@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="text-center">
+        <fa-icon class="fa-2x" [icon]="faFileSignature"></fa-icon>    
+        <hr>
+        <h6>{{title}}</h6>
+    </div>
+    <hr>
+</div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="user">
+        <div class="card-body"> 
+            <div  class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faClipboard'></fa-icon></span>
+                </div>
+                <input formControlName="nombre" [(ngModel)]="evento.nombre" type="text" class="form-control form-control-user" 
+                [ngClass]="{'is-invalid': submitted && f.nombre.errors}"  placeholder="Nombre del Evento"/> <br>
+                <div *ngIf="submitted && f.nombre.errors" class="invalid-feedback">
+                    <div *ngIf="f.nombre.errors.required">La Nombre del evento es requerido</div>
+                </div>
+            </div>
+        
+            <label>Fecha de Inauguración </label>             
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faCalendarDay'></fa-icon></span>
+                </div>
+                <input formControlName="fecha_inicio" type="date" class="form-control form-control-user" 
+                    [(ngModel)]="evento.fecha_inicio" />
+                <div *ngIf="submitted && f.fecha_inicio.errors" class="invalid-feedback">
+                        <div *ngIf="f.fecha_inicio.errors.required">La Fecha de Inicio es requerida</div>
+                </div>
+            </div>
+            <label>Fecha de Finalización </label>             
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faCalendarDay'></fa-icon></span>
+                </div>
+                <input formControlName="fecha_final" type="date" class="form-control form-control-user" 
+                    [(ngModel)]="evento.fecha_final" />
+                 <div *ngIf="submitted && f.fecha_final.errors" class="invalid-feedback">
+                        <div *ngIf="f.fecha_final.errors.required">La Fecha de final es requerida</div>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faBuilding'></fa-icon></span>
+                </div>
+                <input formControlName="organizador" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="evento.organizador" placeholder="Empresa Oraganizadora" />
+                <div *ngIf="submitted && f.organizador.errors" class="invalid-feedback">
+                        <div *ngIf="f.organizador.errors.required">El nombre del Oraganizador es requerido</div>
+                </div>
+            </div>
+
+            <label>Categoria</label> 
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faListOl'></fa-icon></span>
+                </div>
+                <select formControlName="idcategoria" [(ngModel)]="evento.idcategoria">        
+                        <option *ngFor="let item of categorias" [value]="item.idcategoria">{{item.nombre}}</option>
+                </select><br>
+            </div>
+           
+
+            <div class="btn-group">
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-success">Guardar</button><br>
+                    <button type="reset" (click)="onReset()" class="btn btn-danger">Cancelar</button><br>
+                </div>
+            </div>
+
+        </div>        
+</form>
+   
+    
