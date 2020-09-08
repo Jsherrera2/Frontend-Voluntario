@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCalendarDay, faBarcode,faMoneyCheckAlt, faBuilding, faClipboard, faFileSignature, faListOl} from '@fortawesome/free-solid-svg-icons';
+import { faCalendarDay, faBarcode,faMoneyCheckAlt, faBuilding, faClipboard, faFileSignature, faListOl,faArrowAltCircleLeft} from '@fortawesome/free-solid-svg-icons';
 import { Evento } from 'src/app/models/evento';
 import { Categoria } from 'src/app/models/categoria'
 import { EventoService } from 'src/app/services/evento.service';
@@ -22,6 +22,7 @@ export class EventoFormComponent implements OnInit {
   faClipboard = faClipboard;
   faFileSignature=faFileSignature;
   faListOl = faListOl;
+  faArrowAltCircleLeft=faArrowAltCircleLeft;
 
   evento : Evento = new Evento();
   categorias : Categoria[];

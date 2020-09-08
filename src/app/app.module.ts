@@ -21,6 +21,7 @@ import { NavBarVoluntarioComponent } from './components/nav-bar-voluntario/nav-b
 import { EventoFormComponent } from './components/evento-form/evento-form.component';
 import { EventoCardComponent } from './components/evento-card/evento-card.component';
 import { EventoListComponent } from './components/evento-list/evento-list.component';
+import { IngresoFormComponent } from './components/ingreso-form/ingreso-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { EventoListComponent } from './components/evento-list/evento-list.compon
     NavBarVoluntarioComponent,
     EventoFormComponent,
     EventoCardComponent,
-    EventoListComponent
+    EventoListComponent,
+    IngresoFormComponent
   ],
   imports: [
     BrowserModule,

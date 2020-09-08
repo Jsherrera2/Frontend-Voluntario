@@ -9,7 +9,7 @@ import { retry } from 'rxjs/operators';
 })
 export class VoluntarioService {
 
-  url: string ="https://localhost:44362/api/Voluntario";
+  url: string ="http://jeffersonvela-001-site1.dtempurl.com/api/Voluntario";
 
   httpOptions={
     headers:new HttpHeaders({

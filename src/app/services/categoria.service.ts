@@ -9,7 +9,7 @@ import { Categoria } from '../models/categoria';
 })
 export class CategoriaService {
 
-  url: string ="https://localhost:44362/api/Categoria";
+  url: string ="http://jeffersonvela-001-site1.dtempurl.com/api/Categoria";
 
   httpOptions={
     headers:new HttpHeaders({

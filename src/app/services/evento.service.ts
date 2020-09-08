@@ -9,7 +9,7 @@ import { retry } from 'rxjs/operators';
 })
 export class EventoService {
 
-  url: string ="https://localhost:44362/api/Evento";
+  url: string ="http://jeffersonvela-001-site1.dtempurl.com/api/Evento";
 
   httpOptions={
     headers:new HttpHeaders({

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        
+            <fieldset>
+                <label>Usuario:</label>
+                <input type="text" #usuario /><br>
+                <label>Contraseña:</label>
+                <input type="password" #contrasena /><br>
+                <button (click)="login(usuario.value, contrasena.value)" >Ingresar</button>                
+            </fieldset>
+        
+    </div>
+
+</div>

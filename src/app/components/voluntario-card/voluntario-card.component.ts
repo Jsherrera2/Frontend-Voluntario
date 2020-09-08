@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Voluntario } from 'src/app/models/voluntario';
 import { VoluntarioService } from 'src/app/services/voluntario.service';
 import { ActivatedRoute } from '@angular/router';
-import { faUser, faIdCard, faCalendar, faMapMarked, faGenderless,faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faIdCard, faCalendar, faMapMarked, faGenderless,faPhone,faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-voluntario-card',
@@ -17,6 +17,7 @@ export class VoluntarioCardComponent implements OnInit {
   faMapMarked = faMapMarked;
   faGenderless = faGenderless;
   faPhone = faPhone;
+  faArrowAltCircleLeft=faArrowAltCircleLeft;
 
   voluntario : Voluntario;
 

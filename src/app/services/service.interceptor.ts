@@ -30,11 +30,11 @@ export class ServiceInterceptor implements HttpInterceptor {
         }        
         if(next.status === 200)
         { 
-          Swal.fire({
+         /* Swal.fire({
             title : "¡Correcto!",
             text : next.body,
             icon : "success"
-          });
+          });*/
         }
       }
     }, error => {
